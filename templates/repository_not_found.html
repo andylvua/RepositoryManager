@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repository not found</title>
+    <link rel="icon" href="../static/images/RepositoryManager_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles/new-edit_repository.css">
+</head>
+<body>
+<header>
+    <a class="back-button" onclick="window.location.href='/'">
+        <img src="../static/images/arrow-left.svg" alt="back_icon">
+        Back to home
+    </a>
+
+    <a class="logo" href="/">
+        <img src="../static/images/RepositoryManager_logo.png" alt="logo">
+    </a>
+</header>
+
+<div class="container">
+    <div class="header-not-found">
+        <h1><span>{{ repository_name }}</span> does not exist.</h1>
+    </div>
+    <img class="not-found-image" src="../static/images/repo-deleted.svg" alt="logo">
+</div>
+</body>
+</html>
