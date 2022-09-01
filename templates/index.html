@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Repository manager</title>
+    <link rel="icon" href="../static/images/RepositoryManager_icon.png">
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="../static/scripts/main.js" async></script>
+    <script type="module" src="../static/scripts/card_renderer.js" async></script>
+    <script src="../static/scripts/utils/request_notification_permission.js" async></script>
+    <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+    <script src="../static/scripts/drag_and_drop.js" async></script>
+</head>
+
+<body>
+<header>
+    <div class="header-buttons-right">
+        <a class="add_button" href="/new_repository" onclick="openAddForm()">
+            <img src="../static/images/repo.svg" alt="edit_icon">New
+        </a>
+        <a class="refresh_button" onclick="refreshRepositories()">
+            <img src="../static/images/sync.svg" alt="edit_icon">Refresh repositories
+        </a>
+        <a class="reorder_button" onclick="reorderRepositories()">
+            <img src="../static/images/arrow-switch.svg" alt="reorder-icon">Reorder
+        </a>
+        <a class="saved_prompt">
+            <img src="../static/images/check-green.svg" alt="check_icon"> Saved!
+        </a>
+    </div>
+
+    <a class="logo" href="/">
+        <img src="../static/images/RepositoryManager_logo.png" alt="logo">
+    </a>
+
+    <div class="header-buttons-left">
+        <a class="notification_button" onclick="toggleNotifications()" >
+            <img src="../static/images/bell.svg" alt="bell_icon">
+        </a>
+        <a class="github_button" href="https://github.com/andylvua" target="_blank">
+            <img src="../static/images/github-logo.svg" alt="github_icon">
+        </a>
+    </div>
+</header>
+<div class="container">
+    <div class="left-panel">
+        <div class="left-panel__container">
+            <label class="authors-selector-label" for="authors-selector">Select author</label>
+            <select id="authors-selector">
+                <option value="all">Loading authors...</option>
+            </select>
+
+            <label class="languages-selector-label" for="languages-selector">Select language</label>
+            <select id="languages-selector">
+                <option value="all">Loading languages...</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="repositories-container" id="repositories-container">
+
+    </div>
+</div>
+</body>
+</html>
