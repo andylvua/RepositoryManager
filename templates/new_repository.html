@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New repository</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../static/scripts/new-edit_repository.js" async></script>
+    <link rel="icon" href="../static/images/RepositoryManager_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles/new-edit_repository.css">
+</head>
+
+<body>
+<header>
+    <a class="logo" href="/">
+        <img src="../static/images/RepositoryManager_logo.png" alt="logo">
+    </a>
+</header>
+<div class="container">
+    <div class="header">
+        <h1>Add a new repository</h1>
+    </div>
+    <form id="add_form" class="add_form">
+        <label for="repository_url">Repository URL</label>
+        <input required
+               type="url"
+               id="repository_url"
+               class="repository_url"
+               pattern="^https:\/\/github\.com\/.+\/.+"
+        >
+        <label for="description">Description <span>(optional)</span></label>
+        <input type="text"
+               id="description"
+               class="description"
+               pattern=".{1,150}"
+        >
+    </form>
+
+    <input type="submit" form="add_form" class="submit" id="submit" value="Create repository">
+</div>
+</body>
+</html>

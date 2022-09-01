@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit repository</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../static/scripts/new-edit_repository.js" async></script>
+    <link rel="icon" href="../static/images/RepositoryManager_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles/new-edit_repository.css">
+</head>
+<body>
+<header>
+    <a class="logo" href="/">
+        <img src="../static/images/RepositoryManager_logo.png" alt="logo">
+    </a>
+</header>
+<div class="container">
+    <div class="header">
+        <h1>Edit existing repository</h1>
+    </div>
+    <form id="edit_form" class="edit_form">
+        <label for="repository_name">Repository name</label>
+        <input id="repository_name"
+               class="repository_name"
+               type="text"
+               value="{{ repository_name }}"
+               disabled
+        >
+
+        <label for="description">Description <span>(optional)</span></label>
+        <input type="text"
+               id="description"
+               class="description"
+               value="{{ description }}"
+               pattern=".{1,150}"
+        >
+    </form>
+
+    <input type="submit" form="edit_form" class="submit" id="submit" value="Edit repository">
+</div>
+</body>
+</html>
