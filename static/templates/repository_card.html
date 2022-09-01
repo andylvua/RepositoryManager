@@ -1,0 +1,83 @@
+<!--suppress ALL -->
+<div class="card" tabindex="0" id="{{ repository_url }}">
+    <div class="card__content">
+        <div class="card__header">
+            <a id="repository_name" target="_blank" href="{{ repository_url }}">{{ repository_name }}</a>
+        </div>
+
+        <div class="card__author">
+            <div class="card__author__content">
+                <img id="author__avatar" src="{{ avatar_url }}" alt="avatar">
+                <p>{{ author }}</p>
+            </div>
+
+            <img class="card__author__icon" src="../static/images/person.svg" alt="person_icon">
+        </div>
+
+        <div class="card__description">
+            <div class="card__description__content">
+                <p>{{ description }}</p>
+            </div>
+
+            <img class="card__description__icon" src="../static/images/comment.svg" alt="description_icon">
+        </div>
+
+        <div class="repository__stats">
+            <div class="forks">
+                <img class="repository__stats__icon" src="../static/images/fork.svg" alt="fork_icon">
+                <p><span>{{ forks }}</span> forks</p>
+
+            </div>
+
+            <div class="stars">
+                <img class="repository__stats__icon" src="../static/images/star.svg" alt="star_icon">
+                <p><span>{{ stars }}</span> stars</p>
+
+            </div>
+        </div>
+
+        <div class="repository__info">
+            <div class="repository__info__content">
+                <p>Created at: <span>{{ created_at }}</span></p>
+                <p>Last update: <span>{{ updated_at }}</span></p>
+            </div>
+
+            <img class="repository__info__icon" src="../static/images/info.svg" alt="info_icon">
+        </div>
+
+        <div class="languages-container">
+            <div class="languages-bar">
+            {{ languages }}
+            </div>
+            <div class="languages-bar__legend">
+                {{ languages_legend }}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="buttons">
+        <div class="buttons-left">
+        <a id="copy_button" class="copy" onclick="copyGitURL(this)" value="{{ repository_url }}.git">
+            Git url
+            <img src="../static/images/copy.svg" alt="copy_icon">
+            <span class="popup-text" id="copy-popup">Copied!</span>
+        </a>
+        </div>
+        <div class="buttons-right">
+            <a id="download_button" class="download" href="{{ download_url }}">
+                <img src="../static/images/download.svg" alt="download_icon">
+                <span class="button-text">Download</span>
+            </a>
+            <a class="edit"
+               href="/edit_repository?url={{ repository_url }}&description={{ description }}">
+                <img src="../static/images/pencil.svg" alt="edit_icon">
+                <span class="button-text">Edit</span>
+            </a>
+            <a class="delete" onclick="deleteRepository('{{ repository_url }}')">
+                <img src="../static/images/trash.svg" alt="delete_icon">
+                <span class="button-text">Delete</span>
+            </a>
+        </div>
+    </div>
+</div>
