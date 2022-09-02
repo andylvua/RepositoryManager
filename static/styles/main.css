@@ -5,12 +5,10 @@
 * {
     margin: 0;
     padding: 0;
-    /*border: #dc0a0a 0.1px solid;*/
 }
 
 html {
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
 }
 
 body {
@@ -18,7 +16,7 @@ body {
 }
 
 body .container {
-    height: calc(100vh - 50px);
+    height: calc(100vh - 60px);
     display: flex;
     justify-content: space-between;
     width: 97%;
@@ -28,7 +26,6 @@ body .container {
 .left-panel {
     margin-top: 10px;
     width: 280px;
-    height: 100%;
     border-right: var(--inactive-grey-blue) 1px solid;
 }
 
@@ -66,23 +63,6 @@ body .container {
 
 #authors-selector:focus, #languages-selector:focus {
     outline: var(--accent-blue) 2px solid;
-}
-
-.left-panel__container h1 {
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--text-color-primary);
-    text-decoration: none;
-    padding-bottom: 10px;
-    border-bottom: var(--inactive-grey-blue) 1px solid;
-}
-
-.left-panel__container p {
-    font-size: 13px;
-    font-weight: 400;
-    margin: 7px 0;
-    color: var(--secondary-text-gray);
-    text-decoration: none;
 }
 
 .repositories-container {
@@ -131,9 +111,6 @@ body .container {
     100% {
         transform: translateX(0);
     }
-}
-
-.sortable-drag {
 }
 
 .sortable-chosen {

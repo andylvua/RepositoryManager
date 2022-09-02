@@ -94,7 +94,6 @@
 .card__description__content {
     display: flex;
     align-items: center;
-    overflow: hidden;
     max-height: 50px;
 }
 
@@ -140,7 +139,6 @@
 .repository__info__content p {
     font-size: 11px;
     color: var(--secondary-text-gray);
-    overflow-wrap: break-word;
     max-width: 90%;
 }
 

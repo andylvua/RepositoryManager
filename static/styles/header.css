@@ -76,11 +76,8 @@ header {
     background: var(--active-grey-blue);
 }
 
-.reorder_button_active {
-    background: var(--accent-blue);
-}
-
-.reorder_button_active:hover {
+.reorder_button_active, .reorder_button_active:hover,
+.notification_button.active {
     background: var(--accent-blue);
 }
 
@@ -94,10 +91,6 @@ header {
 .notification_button {
     width: 45px;
     background: var(--inactive-grey-blue);
-}
-
-.notification_button.active {
-    background: var(--accent-blue);
 }
 
 .github_button {

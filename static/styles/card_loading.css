@@ -1,13 +1,11 @@
 @import "constants.css";
 
 .card {
-    position: relative;
     margin: 10px 0 0 10px;
     width: 270px;
     height: 350px;
     border-radius: 10px;
     background-color: var(--background-color-primary);
-    font-family: 'Inter', sans-serif;
     animation: loading 0.8s ease-in-out infinite alternate;;
 }
 
