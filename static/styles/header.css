@@ -81,6 +81,19 @@ header {
     background: var(--accent-blue);
 }
 
+.notification_button.pending {
+    animation: blink 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        background: var(--inactive-grey-blue);
+    }
+    to {
+        background: var(--active-grey-blue);
+    }
+}
+
 .saved_prompt {
     display: none;
     cursor: default;
